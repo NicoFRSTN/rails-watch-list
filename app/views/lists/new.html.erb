@@ -1,2 +1,16 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<div class='container'>
+  <div>
+    <h1 class='title text-center'>New list</h1>
+  </div>
+
+  <div>
+    <%= simple_form_for @list do |f| %>
+    <%= f.input :name, placeholder: 'Drama' %>
+    <%= f.submit class: 'btn btn-outline-secondary' %>
+    <% end %>
+  </div>
+
+  <div class='bottom_bar'>
+    <%= link_to "Cancel", lists_path, class: "btn btn-secondary" %>
+  </div>
+</div>
